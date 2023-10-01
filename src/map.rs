@@ -47,4 +47,8 @@ impl TileMap {
     pub fn get_real_coord(&self, x: i16, y: i16) -> (f32, f32) {
         (self.map_array[x as usize][y as usize].x, self.map_array[x as usize][y as usize].y)
     }
+
+    pub fn get_coord(&self, x: i16, y: i16) -> (i16, i16) {
+        (self.map_array[x as usize][y as usize].q, self.map_array[x as usize][y as usize].r)
+    }
 }
